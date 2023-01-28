@@ -1,0 +1,23 @@
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-direction: column;
+}
+
+.list{
+    display: flex;
+    direction: none;
+    text-decoration: none;
+}
+
+a{padding: 0px 10px;
+text-decoration: none;
+color: black;
+
+}
+
+h3{
+    font-size: 24px;
+}

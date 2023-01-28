@@ -1,0 +1,36 @@
+
+
+<div class="row">
+  <div class="column">
+  <div class="row " *ngFor="let product of cartProducts" >
+
+      <img class="column product-image rm " [src]="product.url" height="100">
+      <div class="column">
+      <p>{{product.name}}</p>
+      <p>{{product.price}}</p>
+      <p>amount <input min="0"  (click)="getTotal()" type="number" [(ngModel)]="product.amount" (ngModelChange)="validateAmount(product)" /> </p> 
+    </div>
+  </div>
+  <h2>total : {{total}}$</h2>
+  </div>
+
+  <div class="column lm">
+    <form #form="ngForm" (ngSubmit)="submitForm()">
+      <h4>name</h4>
+      <input  required minlength="3"  type="text" name="title" placeholder="min length 3" #FormTitle="ngModel" [(ngModel)]="name">
+      <br>
+      <h4>address</h4>
+      <input  required minlength="8"  type="text" name="body" placeholder="min length 8" [(ngModel)]="adress">
+      <br>
+      <h4>credit card</h4>
+      <input  required minlength="16" maxlength="16"  pattern="[0-9]+" type="text" name="body" placeholder="min length 16" [(ngModel)]="card">
+      <br>
+      <input type="submit" [disabled]="form.invalid" value="submit">
+  </form>
+  </div>
+    
+
+</div>
+  
+
+ 

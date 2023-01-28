@@ -1,0 +1,15 @@
+<div class="product-container">
+    <a [routerLink]="[product.id]"><img class="product-image" [src]="product.url" height="200"></a>
+    <h3>{{product.name}}</h3>
+    <p>{{product.price}}$</p>
+    <div>
+  <select id="count" name="count" [(ngModel)]="count">
+            <option selected [ngValue]="1">1</option>
+            <option [ngValue]="2">2</option>
+            <option [ngValue]="3">3</option>
+            <option [ngValue]="4">4</option>
+        </select>
+        <button [disabled]="count == 0" (click)="submitForm()">Add to cart</button>
+    </div>
+      
+</div>
